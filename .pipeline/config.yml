@@ -19,8 +19,7 @@ stages:
     cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com"
     cfOrg: "9a5f3a84trial_dev-ccvcd28s"
     cfSpace: "dev"
-    username: "petya.uzunova@accenture.com"
-    password: "11111Pwerwghthtj!g"
+    cfCredentialsId: "cf"
     deployType: "standard"
     tmsUpload: false
     tmsExport: false
