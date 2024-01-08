@@ -1,7 +1,11 @@
 using { sap.capire.incidents as my } from '../db/schema';
 
-service ProcessorService { 
-  entity Incidents as projection on my.Incidents;
+service ProcessorService 
+{ 
+  entity Incidents @(restrict: [
+    { grant: ['READ','WRITE'], to: 'admin' }
+  ]) 
+  as projection on my.Incidents;
   entity Customers as projection on my.Customers;
   entity Conversations as projection on my.Conversations;
   entity Urgency as projection on my.Urgency;
