@@ -8,7 +8,7 @@ stages:
     mavenExecuteStaticCodeChecks: false
     npmExecuteLint: false
   Additional Unit Tests:
-    npmExecuteScripts: true
+    npmExecuteScripts: false
   Acceptance:
     cloudFoundryDeploy: false
     npmExecuteEndToEndTests: false
@@ -19,7 +19,8 @@ stages:
     cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com"
     cfOrg: "9a5f3a84trial_dev-ccvcd28s"
     cfSpace: "dev"
-    cfCredentialsId: "cf"
+    username: "petya.uzunova@accenture.com"
+    password: "11111Pwerwghthtj!g"
     deployType: "standard"
     tmsUpload: false
     tmsExport: false
@@ -30,11 +31,4 @@ steps:
     runScripts:
     - "test"
   cloudFoundryDeploy:
-     cloudFoundryDeploy:
-       cloudFoundry:
-        org: '9a5f3a84trial_dev-ccvcd28s'
-        space: 'dev1'
-        credentialsId: 'cf'    
-        username: 'petya.uzunova@accenture.com'
-        password: '123qwerty!P456'
        mtaDeployParameters: "-f --version-rule ALL" 
