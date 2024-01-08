@@ -33,7 +33,7 @@ steps:
      cloudFoundryDeploy:
        cloudFoundry:
         org: '9a5f3a84trial_dev-ccvcd28s'
-        space: 'dev'
+        space: 'dev1'
         credentialsId: 'cf'    
         username: 'petya.uzunova@accenture.com'
         password: '123qwerty!P456'
