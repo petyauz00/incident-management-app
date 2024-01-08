@@ -24,10 +24,11 @@ stages:
     tmsUpload: false
     tmsExport: false
 steps:
-  artifactPrepareVersion:
-    versioningType: "cloud_noTag"
-  npmExecuteScripts:
-    runScripts:
-    - "test"
-  cloudFoundryDeploy:
-    mtaDeployParameters: "-f --version-rule ALL"
+    cloudFoundryDeploy:
+       cloudFoundry:
+        org: '9a5f3a84trial_dev-ccvcd28s'
+        space: 'dev'
+        credentialsId: 'cf'        
+       mtaDeployParameters: "-f --version-rule ALL"    
+    artifactPrepareVersion:
+       versioningType: "cloud_noTag"    
