@@ -21,7 +21,7 @@ stages:
     cfSpace: "dev"
     cfCredentialsId: "cf"
     deployType: "standard"
-    tmsUpload: false
+    tmsUpload: true
     tmsExport: false
 steps:
   artifactPrepareVersion:
@@ -30,4 +30,7 @@ steps:
     runScripts:
     - "test"
   cloudFoundryDeploy:
-       mtaDeployParameters: "-f --version-rule ALL" 
+    mtaDeployParameters: "-f --version-rule ALL" 
+  tmsUpload:
+    nodeName: "qa"
+    credentialsId: "tms-sk"
