@@ -22,7 +22,6 @@ stages:
     cfCredentialsId: "cf"
     deployType: "standard"
     tmsUpload: true
-    tmsExport: false
 steps:
   artifactPrepareVersion:
     versioningType: "cloud_noTag"
